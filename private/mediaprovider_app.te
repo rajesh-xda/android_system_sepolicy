@@ -38,3 +38,6 @@ allowxperm mediaprovider_app media_rw_data_file:{ dir file } ioctl {
   FS_IOC_GETFLAGS
   FS_IOC_SETFLAGS
 };
+
+# Access external sdcards through /mnt/media_rw
+allow mediaprovider_app { mnt_media_rw_file }:dir search;
